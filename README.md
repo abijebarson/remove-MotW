@@ -1,5 +1,5 @@
 # remove-MotW
-A registry script to safely and conveniently remove Mark of the Web (MotW) from known files, which removes restrictions imposed by the MotW, by adding the a powershell script to the context menu. 
+A registry script to safely and conveniently remove Mark of the Web (MotW) from known files, which removes restrictions imposed by the MotW, by adding a powershell script to the context menu. 
 
 ## Mark of the Web
 Read about it [here at wikipedia](https://en.wikipedia.org/wiki/Mark_of_the_Web).
