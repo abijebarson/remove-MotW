@@ -9,7 +9,7 @@ Just double-click the registry script and click Yes and Yes. It should be done.
 
 ## To do it manually
 1. Open registry editor via search or via Win+R -> type "regedit" -> OK.
-2. Navigate to Computer\HKEY_CLASSES_ROOT\*\shell\
+2. Navigate to Computer\HKEY_CLASSES_ROOT\\*\shell\
 3. Add a new key with whatever name you desire "unblock" or "removemotw" or whatever but unique. I'll assume you named it "removeMotW"
 4. Add a new String value under this with
        Value name: MUIVerb
