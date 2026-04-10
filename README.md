@@ -19,3 +19,18 @@ Just double-click the registry script and click Yes and Yes. It should be done.
 6. Double click the "(Default)" string add this 
       Value data: powershell.exe -Command "Unblock-File -LiteralPath '%L'"
 7. Right click any "locked PDF" in your system to check if it works. (No restart required)
+
+# Disable MotW completely from all newly downloaded files
+WARNING: Don't do this, unless you know what you are doing. Stick to the solution above. Windows has MotW for a reason. Malware which were discovered and yet to be discovered, can leak through windows preview unless restricted in these ways. The above solution as a convienient measure. I'm giving the permanant solution here to provide completeness. 
+
+## Manual Regedit way:
+1. HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies
+2. Right click Policies -> New -> Key -> name it Attachments
+3. Inside Attachments, right click -> New -> DWORD (32-bit) Value → name it SaveZoneInformation → set its value to 1.
+
+All newly downloaded files will no longer get the MotW tag.
+
+## Group Policy (Windows Pro/Enterprise only)
+1. Win + R, type gpedit.msc
+2. Navigate:  User Configuration -> Administrative Templates -> Windows Components -> Attachment Manager
+3. Open "Do not preserve zone information in file attachments" and set it to Enabled.
